@@ -314,6 +314,10 @@ jspm_packages/
 # TypeScript cache
 *.tsbuildinfo
 
+# Typescript output
+**/typescript-training/**/*.js
+**/typescript-training/**/*.js.map
+
 # Optional npm cache directory
 .npm
 
