@@ -11,7 +11,8 @@ app/**/*.js
 app/**/*.js.map
 
 # Miscellaneous
-/.angular/cache
+.angular/cache
+.angular/
 
 # dependencies
 node_modules/
