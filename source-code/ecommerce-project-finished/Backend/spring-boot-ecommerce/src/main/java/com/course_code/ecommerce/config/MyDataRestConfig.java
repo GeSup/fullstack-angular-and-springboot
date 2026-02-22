@@ -2,6 +2,7 @@ package com.course_code.ecommerce.config;
 
 import com.course_code.ecommerce.entity.Product;
 import com.course_code.ecommerce.entity.ProductCategory;
+import org.jspecify.annotations.NonNull;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;
@@ -12,7 +13,7 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 public class MyDataRestConfig implements RepositoryRestConfigurer {
 
     @Override
-    public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry cors) {
+    public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, @NonNull CorsRegistry cors) {
 
         HttpMethod[] theUnsupportedActions = {HttpMethod.PUT, HttpMethod.POST, HttpMethod.DELETE, HttpMethod.PATCH};
 
