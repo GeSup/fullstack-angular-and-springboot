@@ -4,18 +4,19 @@
       <div class="row">
         <!-- loop over the collection of products -->
         <div *ngFor="let product of products" class="col-md-3">
-
           <div class="product-box">
-            <img src="{{ product.imageUrl }}" alt="" class="img-responsive" />
-            <h1>{{ product.name }}</h1>
-            <div class="price">{{ product.unitPrice | currency:'USD' }}</div>
+            <a routerLink="/products/{{ product.id }}">
+              <img src="{{ product.imageUrl }}" alt="" class="img-responsive" />
+
+              <h1>{{ product.name }}</h1>
+            </a>
+            <div class="price">{{ product.unitPrice | currency: 'USD' }}</div>
             <a href="#" class="primary-btn">Add to cart</a>
           </div>
-
         </div>
 
         <!-- if no products found -->
-        <div *ngIf="products?.length == 0" class="alert alert-warning col-md-12" role="alert">
+        <div *ngIf="products.length == 0" class="alert alert-warning col-md-12" role="alert">
           No products found.
         </div>
       </div>

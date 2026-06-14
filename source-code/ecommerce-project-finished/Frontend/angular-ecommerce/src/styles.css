@@ -784,6 +784,10 @@ table.table.table-bordered th {
   margin-top: 60px
 }
 
+.detail-img {
+  width: 30%;
+}
+
 /**/
 
 /*
@@ -1073,7 +1077,7 @@ footer ul li {
   }
 
   .product-box {
-    text-align: centerg
+    text-align: center
   }
 
   .page-container {
