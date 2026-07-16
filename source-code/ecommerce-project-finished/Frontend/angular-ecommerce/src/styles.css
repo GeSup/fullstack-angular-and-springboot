@@ -548,7 +548,7 @@ input.au-input.au-input-xl {
 }
 
 .main-content.page-m {
-  padding: 10% 15% !important
+  padding: 10% 30% 10% 5%;
 }
 
 /*
@@ -632,7 +632,8 @@ input.au-input.au-input-xl {
   margin-bottom: 50px
 }
 
-.input-space input[type=text] {
+.input-space input[type=text],
+.input-space input[type=email]{
   width: 100%;
   height: 40px;
   border-radius: 30px;

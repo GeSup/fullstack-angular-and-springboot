@@ -1,6 +1,6 @@
 import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { ProductList } from './components/product-list/product-list';
@@ -12,10 +12,20 @@ import { ProductDetails } from './components/product-details/product-details';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CartStatus } from './components/cart-status/cart-status';
 import { CartDetails } from './components/cart-details/cart-details';
+import { Checkout } from './components/checkout/checkout';
 
 @NgModule({
-  declarations: [App, ProductList, ProductCategoryMenu, Search, ProductDetails, CartStatus, CartDetails],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, NgbModule],
+  declarations: [
+    App,
+    ProductList,
+    ProductCategoryMenu,
+    Search,
+    ProductDetails,
+    CartStatus,
+    CartDetails,
+    Checkout,
+  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, NgbModule, ReactiveFormsModule],
   providers: [provideBrowserGlobalErrorListeners(), ProductService],
   bootstrap: [App],
 })
