@@ -41,10 +41,14 @@
             <div class="col-md-2"><label for="country">Country</label></div>
             <div class="col-md-9">
               <div class="input-space">
-                <select id="country" formControlName="country">
-                  <option value="USA">USA</option>
-                  <option value="Canada">Canada</option>
-                  <option value="UK">UK</option>
+                <select
+                  id="country"
+                  formControlName="country"
+                  (change)="getStates('shippingAddress')"
+                >
+                  <option *ngFor="let country of countries" [ngValue]="country">
+                    {{ country.name }}
+                  </option>
                 </select>
               </div>
             </div>
@@ -73,12 +77,9 @@
             <div class="col-md-9">
               <div class="input-space">
                 <select id="state" formControlName="state">
-                  <option value="AL">Alabama</option>
-                  <option value="AK">Alaska</option>
-                  <option value="AZ">Arizona</option>
-                  <option value="AR">Arkansas</option>
-                  <option value="CA">California</option>
-                  <!-- Add other states as needed -->
+                  <option *ngFor="let state of shippingAddressStates" [ngValue]="state">
+                    {{ state.name }}
+                  </option>
                 </select>
               </div>
             </div>
@@ -110,10 +111,14 @@
             <div class="col-md-2"><label for="country">Country</label></div>
             <div class="col-md-9">
               <div class="input-space">
-                <select id="country" formControlName="country">
-                  <option value="USA">USA</option>
-                  <option value="Canada">Canada</option>
-                  <option value="UK">UK</option>
+                <select
+                  id="country"
+                  formControlName="country"
+                  (change)="getStates('billingAddress')"
+                >
+                  <option *ngFor="let country of countries" [ngValue]="country">
+                    {{ country.name }}
+                  </option>
                 </select>
               </div>
             </div>
@@ -142,11 +147,9 @@
             <div class="col-md-9">
               <div class="input-space">
                 <select id="state" formControlName="state">
-                  <option value="AL">Alabama</option>
-                  <option value="AK">Alaska</option>
-                  <option value="AZ">Arizona</option>
-                  <option value="AR">Arkansas</option>
-                  <option value="CA">California</option>
+                  <option *ngFor="let state of billingAddressStates" [ngValue]="state">
+                    {{ state.name }}
+                  </option>
                   <!-- Add other states as needed -->
                 </select>
               </div>
@@ -212,10 +215,7 @@
               <div class="input-space">
                 <select id="expirationMonth" formControlName="expirationMonth">
                   <!-- Add month options -->
-                  <option
-                    *ngFor="let month of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]"
-                    [value]="month"
-                  >
+                  <option *ngFor="let month of creditCardMonths" (change)="handleMonthsAndYears()">
                     {{ month }}
                   </option>
                 </select>
@@ -227,9 +227,13 @@
             <div class="col-md-2"><label for="expirationYear">Expiration Year</label></div>
             <div class="col-md-9">
               <div class="input-space">
-                <select id="expirationYear" formControlName="expirationYear">
+                <select
+                  id="expirationYear"
+                  formControlName="expirationYear"
+                  (change)="handleMonthsAndYears()"
+                >
                   <!-- Add year options -->
-                  <option *ngFor="let year of [2024, 2025, 2026, 2027, 2028]" [value]="year">
+                  <option *ngFor="let year of creditCardYears">
                     {{ year }}
                   </option>
                 </select>
