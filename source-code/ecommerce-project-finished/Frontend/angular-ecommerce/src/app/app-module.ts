@@ -1,4 +1,5 @@
 import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { environment } from '../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing-module';
@@ -13,6 +14,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CartStatus } from './components/cart-status/cart-status';
 import { CartDetails } from './components/cart-details/cart-details';
 import { Checkout } from './components/checkout/checkout';
+import { AuthModule } from '@auth0/auth0-angular';
+import { Login } from './components/login/login';
 
 @NgModule({
   declarations: [
@@ -24,8 +27,22 @@ import { Checkout } from './components/checkout/checkout';
     CartStatus,
     CartDetails,
     Checkout,
+    Login,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, NgbModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    NgbModule,
+    ReactiveFormsModule,
+    AuthModule.forRoot({
+      domain: environment.auth0.domain,
+      clientId: environment.auth0.clientId,
+      authorizationParams: {
+        redirect_uri: window.location.origin,
+      },
+    }),
+  ],
   providers: [provideBrowserGlobalErrorListeners(), ProductService],
   bootstrap: [App],
 })

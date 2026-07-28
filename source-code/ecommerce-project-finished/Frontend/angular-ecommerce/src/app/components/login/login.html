@@ -1,0 +1,6 @@
+<div class="login-status-header">
+  <div *ngIf="isAuthenticated" class="login-status-user-info">Welcome back {{ nickname }}</div>
+  <button class="au-btn-submit" *ngIf="!isAuthenticated" (click)="login()">Login</button>
+
+  <button class="au-btn-submit" *ngIf="isAuthenticated" (click)="logout()">Logout</button>
+</div>
