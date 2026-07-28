@@ -16,6 +16,7 @@ import { CartDetails } from './components/cart-details/cart-details';
 import { Checkout } from './components/checkout/checkout';
 import { AuthModule } from '@auth0/auth0-angular';
 import { Login } from './components/login/login';
+import { MembersPage } from './components/members-page/members-page';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { Login } from './components/login/login';
     CartDetails,
     Checkout,
     Login,
+    MembersPage,
   ],
   imports: [
     BrowserModule,
