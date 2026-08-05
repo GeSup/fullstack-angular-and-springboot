@@ -1,9 +1,6 @@
 package com.course_code.ecommerce.config;
 
-import com.course_code.ecommerce.entity.Country;
-import com.course_code.ecommerce.entity.Product;
-import com.course_code.ecommerce.entity.ProductCategory;
-import com.course_code.ecommerce.entity.State;
+import com.course_code.ecommerce.entity.*;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.metamodel.EntityType;
 import org.jspecify.annotations.NonNull;
@@ -42,6 +39,8 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
         disableHttpMethods(ProductCategory.class, config, theUnsupportedActions);
         disableHttpMethods(Country.class, config, theUnsupportedActions);
         disableHttpMethods(State.class, config, theUnsupportedActions);
+        disableHttpMethods(State.class, config, theUnsupportedActions);
+        disableHttpMethods(Order.class, config, theUnsupportedActions);
 
         // call an internal helper method
         exposeIds(config);

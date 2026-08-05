@@ -17,6 +17,7 @@ import { Checkout } from './components/checkout/checkout';
 import { AuthModule } from '@auth0/auth0-angular';
 import { Login } from './components/login/login';
 import { MembersPage } from './components/members-page/members-page';
+import { OrderHistoryComponent } from './components/order-history/order-history';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { MembersPage } from './components/members-page/members-page';
     Checkout,
     Login,
     MembersPage,
+    OrderHistoryComponent,
   ],
   imports: [
     BrowserModule,

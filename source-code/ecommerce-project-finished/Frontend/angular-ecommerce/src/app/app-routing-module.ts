@@ -6,11 +6,13 @@ import { CartDetails } from './components/cart-details/cart-details';
 import { Checkout } from './components/checkout/checkout';
 import { Login } from './components/login/login';
 import { MembersPage } from './components/members-page/members-page';
+import { OrderHistoryComponent } from './components/order-history/order-history';
 import { AuthGuard } from '@auth0/auth0-angular';
 
 const routes: Routes = [
-  { path: 'login', component: Login },
+  { path: 'order-history', component: OrderHistoryComponent, canActivate: [AuthGuard] },
   { path: 'members', component: MembersPage, canActivate: [AuthGuard] },
+  { path: 'login', component: Login },
   { path: 'checkout', component: Checkout, canActivate: [AuthGuard] },
   { path: 'cart-details', component: CartDetails },
   { path: 'products/:id', component: ProductDetails },

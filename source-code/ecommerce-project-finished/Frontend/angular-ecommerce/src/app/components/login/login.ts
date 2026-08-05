@@ -13,6 +13,8 @@ export class Login implements OnInit, OnDestroy {
   private _isAuthenticated = signal(false);
   private _user = signal<User | null | undefined>(null);
 
+  storage: Storage = sessionStorage;
+
   private destroy$ = new Subject<void>();
 
   constructor(private auth: AuthService) {}
@@ -24,6 +26,8 @@ export class Login implements OnInit, OnDestroy {
 
     this.auth.user$.pipe(takeUntil(this.destroy$)).subscribe((user) => {
       this._user.set(user);
+
+      this.storage.setItem('userEmail', JSON.stringify(user?.email));
     });
   }
 
