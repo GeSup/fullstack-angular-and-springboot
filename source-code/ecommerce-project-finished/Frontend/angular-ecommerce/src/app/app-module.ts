@@ -1,5 +1,4 @@
 import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { environment } from '../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing-module';
@@ -18,6 +17,7 @@ import { AuthModule } from '@auth0/auth0-angular';
 import { Login } from './components/login/login';
 import { MembersPage } from './components/members-page/members-page';
 import { OrderHistoryComponent } from './components/order-history/order-history';
+import myAppConfig from './config/my-app-config';
 
 @NgModule({
   declarations: [
@@ -39,13 +39,7 @@ import { OrderHistoryComponent } from './components/order-history/order-history'
     HttpClientModule,
     NgbModule,
     ReactiveFormsModule,
-    AuthModule.forRoot({
-      domain: environment.auth0.domain,
-      clientId: environment.auth0.clientId,
-      authorizationParams: {
-        redirect_uri: window.location.origin,
-      },
-    }),
+    AuthModule.forRoot(myAppConfig.auth0),
   ],
   providers: [provideBrowserGlobalErrorListeners(), ProductService],
   bootstrap: [App],
