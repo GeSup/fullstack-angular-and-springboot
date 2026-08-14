@@ -1,4 +1,5 @@
 import { Component, signal } from '@angular/core';
+import { AuthService } from '@auth0/auth0-angular';
 import { OrderHistory } from '../../common/order-history';
 import { OrderHistoryService } from '../../services/order-history.service';
 
@@ -12,7 +13,10 @@ export class OrderHistoryComponent {
   private _orderHistoryList = signal<OrderHistory[]>([]);
   storage: Storage = sessionStorage;
 
-  constructor(private orderHistoryService: OrderHistoryService) {}
+  constructor(
+    private orderHistoryService: OrderHistoryService,
+    private auth: AuthService,
+  ) {}
 
   get orderHistoryList() {
     return this._orderHistoryList();
