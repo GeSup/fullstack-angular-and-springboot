@@ -6,8 +6,20 @@
       "name": "ng serve with chrome",
       "type": "chrome",
       "request": "launch",
-      "runtimeArgs": ["--auto-open-devtools-for-tabs"],
+      "runtimeArgs": [
+        "--auto-open-devtools-for-tabs"
+      ],
       "preLaunchTask": "npm: start",
+      "url": "https://localhost:4200/"
+    },
+    {
+      "name": "ng serve with chrome (http)",
+      "type": "chrome",
+      "request": "launch",
+      "runtimeArgs": [
+        "--auto-open-devtools-for-tabs"
+      ],
+      "preLaunchTask": "npm: start:http",
       "url": "http://localhost:4200/"
     },
     {

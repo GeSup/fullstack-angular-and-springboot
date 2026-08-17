@@ -45,3 +45,6 @@ Thumbs.db
 
 # Environment files
 environment.development.ts
+
+localhost.conf
+ssl-localhost/*
