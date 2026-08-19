@@ -42,9 +42,7 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
-            "polyfills": [
-              "@angular/localize/init"
-            ]
+            "polyfills": ["@angular/localize/init"]
           },
           "configurations": {
             "production": {
@@ -72,6 +70,17 @@
                   "with": "src/environments/environment.development.ts"
                 }
               ]
+            },
+            "qa": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.qa.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -84,6 +93,9 @@
             },
             "development": {
               "buildTarget": "angular-ecommerce:build:development"
+            },
+            "qa": {
+              "buildTarget": "angular-ecommerce:build:qa"
             }
           },
           "defaultConfiguration": "development"

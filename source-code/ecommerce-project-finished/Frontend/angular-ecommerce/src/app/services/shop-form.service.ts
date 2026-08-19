@@ -4,13 +4,14 @@ import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Country } from '../common/country';
 import { State } from '../common/state';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ShopFormService {
-  private countriesUrl: string = 'http://localhost:8080/api/countries';
-  private statesUrl: string = 'http://localhost:8080/api/states';
+  private countriesUrl: string = environment.luv2shopApiUrl + '/countries';
+  private statesUrl: string = environment.luv2shopApiUrl + '/states';
 
   constructor(private httpClient: HttpClient) {}
 
