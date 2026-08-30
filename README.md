@@ -24,24 +24,29 @@ I'd recommend the following road map:
 
 ### Core Courses
 1. [Java Programming Introduction for Beginners](https://www.udemy.com/course/java-intro-for-beginners/?referralCode=325F0EA33466DA1D8710)
-1. [Spring Boot 3, Spring 6 and Hibernate for Beginners](http://www.luv2code.com/spring-github)
+1. [Spring Boot 4, Spring 7 and Hibernate for Beginners](http://www.luv2code.com/spring-github)
 1. [Spring Boot Unit Testing](https://www.udemy.com/course/spring-boot-unit-testing/?referralCode=4184DE360D78A70932EE)
-1. [Deploy Spring Boot 3 Apps on AWS (Amazon Cloud)](https://www.udemy.com/course/deploy-spring-boot-3-apps-to-aws/?referralCode=DCE8981B59C70BA6BDBF)
+1. [Deploy Spring Boot 4 Applications on AWS](https://www.udemy.com/course/deploy-spring-boot-3-apps-to-aws/?referralCode=DCE8981B59C70BA6BDBF)
 1. [Hibernate: Advanced Development Techniques](https://www.udemy.com/course/hibernate-tutorial-advanced/?referralCode=6FB9E2BA9AF54A4C9E69)
 1. [Master Java Design Patterns](https://www.luv2code.com/master-java-design-patterns-github)
 
 ### Project Course: Spring Boot, Spring MVC and Thymeleaf
 For end-to-end project with Spring Boot, Spring MVC and Thymeleaf:
-1. [Spring Boot 3 Project - Build a Job Portal Web Application](https://www.udemy.com/course/spring-boot-project-job-portal-web-app/?referralCode=BB9301596150194B61E2)
+1. [Spring Boot 4 Project: Build a Job Portal Web Application](https://www.udemy.com/course/spring-boot-project-job-portal-web-app/?referralCode=BB9301596150194B61E2)
 
-### REST API Project Course: Spring Boot REST APIs
+### REST API Project Course: Spring Boot 4 REST APIs: Building Modern REST APIs
 This is an intermediate level course that includes four REST API projects:
-1. [Spring Boot REST APIs - Building Modern APIs with Spring Boot](https://www.udemy.com/course/spring-boot-rest-apis/)
+1. [Spring Boot 4 REST APIs: Building Modern REST APIs](https://www.udemy.com/course/spring-boot-rest-apis/)
 
 ### Project Courses: Full Stack
 For full stack projects, you have the choice of either Angular or React. Pick the one that you like the best.
 1. [Full Stack: Angular and Spring Boot](https://www.udemy.com/course/full-stack-angular-spring-boot-tutorial/?referralCode=2264F90C65A86316BB6B)
 1. [Full Stack: React and Spring Boot](https://www.udemy.com/course/full-stack-react-and-java-spring-boot-the-developer-guide/?referralCode=4325FA579FD3D313E28D)
+
+### Java Web Test Automation
+Learn how to automate web browser testing using Java and test automation frameworks:
+1. [Java Playwright: Master Web Test Automation](https://www.luv2code.com/java-playwright-github)
+1. [Java Selenium: Master Web Test Automation](https://www.luv2code.com/java-selenium-github)
 
 &#8287;
 ## More luv2code Courses

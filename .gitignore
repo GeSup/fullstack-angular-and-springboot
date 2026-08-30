@@ -1,8 +1,16 @@
+################################################################################
+# Source code repository for luv2code training courses.
+# https://www.luv2code.com
+################################################################################
 
-# Created by https://www.gitignore.io/api/node,java,macos,maven,eclipse,angular,intellij,netbeans,visualstudio,visualstudiocode
-# Edit at https://www.gitignore.io/?templates=node,java,macos,maven,eclipse,angular,intellij,netbeans,visualstudio,visualstudiocode
+################################################################################
+# OS-SPECIFIC FILES
+################################################################################
 
-### Angular ###
+########################################
+# macOS
+########################################
+
 ## Angular ##
 # compiled output
 dist/
@@ -223,14 +231,8 @@ hs_err_pid*
 .DS_Store
 .AppleDouble
 .LSOverride
-
-# Icon must end with two \r
 Icon
-
-# Thumbnails
 ._*
-
-# Files that might appear in the root of a volume
 .DocumentRevisions-V100
 .fseventsd
 .Spotlight-V100
@@ -238,32 +240,144 @@ Icon
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
-
-# Directories potentially created on remote AFP share
 .AppleDB
 .AppleDesktop
 Network Trash Folder
 Temporary Items
 .apdisk
+*.icloud
 
-### Maven ###
+
+########################################
+# Windows
+########################################
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.stackdump
+*.lnk
+
+
+########################################
+# Linux
+########################################
+.Trash-*
+.cache/
+.config/
+.local/
+*.directory
+*~
+*.tmp
+lost+found/
+
+
+################################################################################
+# JAVA & BUILD ARTIFACTS
+################################################################################
+
+# Compiled output
+*.class
+*.ctxt
+*.log
+
+# Java packaged archives (avoid committing builds)
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+
+# JVM crash logs
+hs_err_pid*
+replay_pid*
+
+
+################################################################################
+# MAVEN
+################################################################################
+
+# Build output
 target/
+
+# Maven internal metadata
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
 pom.xml.next
 release.properties
 dependency-reduced-pom.xml
+
+# Build number & wrapper
 buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
-.flattened-pom.xml
 
-### NetBeans ###
-**/nbproject/private/
-**/nbproject/Makefile-*.mk
-**/nbproject/Package-*.bash
+
+################################################################################
+# INTELLIJ IDEA
+################################################################################
+
+.idea/
+*.iml
+*.iws
+*.ipr
+
+out/
+
+
+################################################################################
+# ECLIPSE
+################################################################################
+
+.metadata/
+.project
+.classpath
+.settings/
+.loadpath
+.recommenders/
+
+bin/
+tmp/
+
+*.tmp
+*.bak
+*.swp
+
+
+################################################################################
+# VISUAL STUDIO CODE
+################################################################################
+
+.vscode/
+.history/
+*.vsix
+
+
+################################################################################
+# CLAUDE CODE
+################################################################################
+
+.claude/
+CLAUDE.md
+
+
+################################################################################
+# GENERIC BUILD & TEMP
+################################################################################
+
 build/
+dist/
+
+*.swp
+*.swo
+*.bak
+*.tmp
+*~.nib
 nbbuild/
 nbdist/
 .nb-gradle/
